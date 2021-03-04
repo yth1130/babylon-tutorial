@@ -1,4 +1,5 @@
 const path = require('path');
+// var compression = require('compression');
 
 module.exports = {
     mode: 'development',
@@ -8,6 +9,10 @@ module.exports = {
         contentBase: './dist',
         compress: true,
         hot: true,
+        // before(app) {
+        //     app.use(compression({}));
+        //     app.use(devMiddleware);
+        // },
     },
     module: {
         rules: [

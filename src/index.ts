@@ -6,6 +6,13 @@ import { Scene } from "@babylonjs/core/scene";
 // type Engine = import("@babylonjs/core/Engines/engine").Engine;
 // type Scene = import("@babylonjs/core/scene").Scene;
 
+if (process.env.NODE_ENV !== 'production') {
+    console.log('devMode');
+}
+else {
+    console.log('production mode');
+}
+
 function initBabylon() {
     const canvas = document.getElementById("renderCanvas") as HTMLCanvasElement; // Get the canvas element
     const engine = new Engine(canvas, true); // Generate the BABYLON 3D engine
